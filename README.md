@@ -1,8 +1,18 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Environment Variables
+
+Create a `.env.local` file in the root directory and add your Resend API key:
+
+```
+RESEND_API_KEY=your_resend_api_key_here
+```
+
+You can get your API key from [Resend Dashboard](https://resend.com/api-keys).
+
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and run the development server:
 
 ```bash
 npm run dev

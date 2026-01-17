@@ -90,15 +90,28 @@ export function useContactForm(): UseContactFormReturn {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call - in a real app, this would call an API endpoint
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(result.data),
+      });
+
+      const responseData = await response.json();
+
+      if (!response.ok) {
+        throw new Error(responseData.error || 'Erro ao enviar formulário');
+      }
+
       console.log('Form submitted successfully:', result.data);
       resetForm();
       // Here you would show a success toast/notification
+      alert('Orçamento enviado com sucesso! Entraremos em contato em breve.');
     } catch (error) {
       console.error('Error submitting form:', error);
       // Here you would show an error toast/notification
+      alert('Erro ao enviar orçamento. Tente novamente mais tarde.');
     } finally {
       setIsSubmitting(false);
     }
