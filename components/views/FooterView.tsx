@@ -6,7 +6,7 @@ import { FOOTER_CONTENT } from "@/models";
 
 export function FooterView() {
   return (
-    <footer className="py-20 px-6 relative overflow-hidden">
+    <footer className="pb-20 pt-45 px-6 relative overflow-hidden bg-linear-to-t from-nivora-primary/20 via-nivora-purple/5 to-transparent">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <motion.div
@@ -15,22 +15,12 @@ export function FooterView() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <a 
+            <a
               href={`mailto:${FOOTER_CONTENT.email}`}
               className="text-xl font-medium text-white hover:text-[#8fc2e6] transition-colors flex items-center gap-2 mb-4"
             >
               {FOOTER_CONTENT.email}
             </a>
-            
-            <div className="space-y-2">
-              {FOOTER_CONTENT.locations.map((location, index) => (
-                <div key={location} className="flex items-center gap-2 text-white/50 text-sm">
-                  {index === 0 && <MapPin className="w-4 h-4" />}
-                  {index !== 0 && <span className="w-4" />}
-                  {location}
-                </div>
-              ))}
-            </div>
           </motion.div>
 
           <motion.div
@@ -100,9 +90,9 @@ export function FooterView() {
               ))}
             </div> */}
 
-          <a href="/" className="flex items-center">
-            <img src="/images/logo/logo-nivora-branca.png" alt="Nivora Labs" width={150} height={100} />
-          </a>
+            <a href="/" className="flex items-center">
+              <img src="/images/logo/logo-nivora-branca.png" alt="Nivora Labs" width={150} height={100} />
+            </a>
           </motion.div>
         </div>
 

@@ -80,7 +80,7 @@ export async function sendQuoteEmail({ formData }: SendQuoteEmailParams) {
 
     const result = await resend.emails.send({
       from: 'Nivora Labs <onboarding@resend.dev>',
-      to: 'adm@nivoralabs.com.br',
+      to: 'comercial@nivoralabs.com.br',
       subject: `Nova Solicitação de Orçamento - ${name}`,
       html: emailHtml,
       replyTo: email,

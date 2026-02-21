@@ -1,0 +1,38 @@
+---
+description: Rule for structuring complex views and components into a specific folder pattern using partials and hooks.
+globs: components/views/**/*, components/ui/**/*
+---
+
+# Compound Component Structure Rule
+
+Quando criar ou refatorar componentes grandes ou "Views", utilize o seguinte formato de pasta para dividir a responsabilidade do componente de forma limpa, seguindo um padrão onde a apresentação, estado, e blocos menores são desacoplados.
+
+## Estrutura do Componente
+
+Cada componente complexo deve ter sua própria pasta com a seguinte estrutura:
+
+```text
+NomeDoComponente/
+├── index.tsx                # Arquivo principal que conecta os partials ao hook
+├── useNomeDoComponente.ts   # Hook que encapsula toda a lógica e estado do componente
+└── partials/                # Pasta contendo os subcomponentes (apresentação visual e pequenos blocos de estrutura)
+    ├── PartialPrincipal.tsx
+    ├── Header.tsx
+    └── ...
+```
+
+## Regras e Responsabilidades:
+
+1. **`index.tsx` (Componente Principal)**: 
+   - Serve apenas para montar as peças.
+   - Deve invocar o hook local `useNomeDoComponente` e em seguida renderizar os subcomponentes vindos de `partials/`.
+   - Passa como props os métodos e dados devolvidos pelo hook aos partials.
+
+2. **`useNomeDoComponente.ts` (Hook da View/Viewmodel)**:
+   - Todo o estado (`useState`), os ciclos de vida (`useEffect`) e callbacks (`useCallback`) devem ficar concentrados neste hook.
+   - Retorna um objeto agrupando estados, refs e funções prontas para serem mapeadas nos views visuais.
+   - Se conectam a dependências globais, viewmodels globais e manipulam contexto complexo, se necessário.
+
+3. **`partials/` (Componentes Visuais)**:
+   - Os subcomponentes dentro da pasta partials devem ser majoritariamente *Presentational Components* (focados no design e na marcação TSX).
+   - Não devem ter lógicas complexas internas. Lógicas de UI pequenas e restritas ao componente visual podem estar lá, mas regras de negócio e manipulação de estado complexa devem vir através de callbacks pelas props.

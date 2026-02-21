@@ -1,7 +1,7 @@
 import { FooterContent } from '../types';
 
 export const FOOTER_CONTENT: FooterContent = {
-  email: "adm@nivora.com.br",
+  email: "comercial@nivora.com.br",
   phone: "+55 99999-9999",
   locations: ["Aracaju, Sergipe, Brasil"],
   quickLinks: [

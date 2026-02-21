@@ -1,30 +1,29 @@
 import { ServicesContent } from '../types';
 
 export const SERVICES_CONTENT: ServicesContent = {
-  title: "Soluções Inteligentes Projetadas para Pensar e Evoluir Ainda Mais.",
-  subtitle: "Projetamos e escalamos produtos inteligentes combinando IA, design e desenvolvimento para criar soluções que evoluem com propósito e entregam impacto real.",
-  cta: "Explorar Serviços",
+  title: "Tecnologia que Faz sua Empresa Vender e Crescer.",
+  subtitle: "Transformamos ideias em ferramentas digitais fáceis de usar. Do site institucional à inteligência artificial, a nivoraLabs cuida de tudo para você.",
+  cta: "Quero um Orçamento",
   cards: [
     {
-      icon: "Sparkles",
-      title: "Sistemas com IA",
-      description: "Construindo sistemas inteligentes que aprendem, adaptam e tomam decisões com precisão e propósito.",
+      icon: "Monitor",
+      title: "Sites e Landing Pages",
+      description: "Criamos sites modernos que passam confiança e são focados em transformar visitantes em clientes reais.",
     },
     {
-      icon: "GitBranch",
-      title: "Design de Produto",
-      description: "Projetando experiências digitais onde clareza encontra criatividade e cada detalhe tem propósito.",
+      icon: "Smartphone",
+      title: "Aplicativos para Celular",
+      description: "Sua empresa na palma da mão dos seus clientes com aplicativos rápidos, bonitos e fáceis de navegar.",
     },
     {
-      icon: "Layers",
-      title: "Desenvolvimento Full-Stack",
-      description: "Engenharia de soluções perfeitas e de alta performance que conectam front a back com lógica impecável.",
+      icon: "MessageCircle", 
+      title: "Automação de WhatsApp",
+      description: "Atenda seus clientes 24h por dia com robôs inteligentes que vendem, agendam e tiram dúvidas de forma automática.",
     },
     {
-      icon: "LayoutGrid",
-      title: "Desenvolvimento CMS",
-      description: "Criando sistemas de conteúdo que dão às equipes controle, flexibilidade e escalabilidade sem esforço.",
+      icon: "Brain", 
+      title: "Sistemas e IA",
+      description: "Software sob medida e Inteligência Artificial para organizar sua operação e automatizar tarefas burocráticas.",
     },
   ],
 };
-

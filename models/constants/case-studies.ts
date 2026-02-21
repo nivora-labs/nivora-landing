@@ -1,42 +1,44 @@
 import { CaseStudy, CaseStudiesContent } from '../types';
 
-//TODO: FALTAM IMAGENS E LINKS PARA OS 3 PROJETOS COMENTADOS
-
 export const CASE_STUDIES_CONTENT: CaseStudiesContent = {
-  title: "Projetos que definem nosso padrão",
+  title: "Projetos que Transformam Ideias em Resultados Reais",
 };
 
 export const CASE_STUDIES: CaseStudy[] = [
-    {
-      id: 2,
-      name: "HypoPredict",
-      category: "AI HealthTech",
-      description: "Colaboração na engenharia de software para healthtech, focada na criação de modelos preditivos para antecipação de eventos hipoglicêmicos.",
-      tags: ["React Native", "TensorFlow", "Google Cloud"],
-      cta: "Visitar site",
-      link: "https://hipoglicemia.com",
-      image: "/images/case-studies/hypo.png"
-    },
-    
-//   {
-//     id: 8,
-//     name: "Cerqueira Rocha",
-//     category: "PropTech & Real Estate",
-//     description: "Plataforma imobiliária completa com foco em conversão, gestão e experiência premium.",
-//     tags: ["Next.js", "PostgreSQL", "Stripe"],
-//     cta: "Visitar site",
-//     link: "https://cerqueirarocha.com.br",
-//     image: "/images/case-studies/real_estate_app_on_tablet.png",
-//   },
-//   {
-//     id: 9,
-//     name: "Jiro",
-//     category: "Logística & Delivery",
-//     description: "Delivery inteligente para comércio de bairro. IA otimiza rotas e reduz taxas operacionais.",
-//     tags: ["Flutter", "Node.js", "Maps API"],
-//     cta: "Visitar site",
-//     link: "https://jiro.com.br",
-//     image: "/images/case-studies/delivery_app_on_smartphone.png",
-//   },
+  {
+    id: 1,
+    name: "HypoPredict",
+    client: "Hipoglicemia.com",
+    category: "AI HealthTech",
+    impact_headline: "Prevendo crises antes que elas aconteçam.",
+    description: "Desenvolvemos um sistema de IA para prever crises de hipoglicemia antes que elas aconteçam.",
+    what_we_did: [
+      "Criação de modelos de IA preditivos",
+      "Análise de dados em tempo real",
+      "Interface focada em alertas rápidos",
+    ],
+    results: "O sistema antecipa eventos hipoglicêmicos, permitindo que o usuário tome medidas preventivas e tenha mais qualidade de vida.",
+    tags: ["React Native", "TensorFlow", "Google Cloud"],
+    cta: "Visitar site",
+    link: "https://www.hipoglicemia.com/",
+    image: "/images/case-studies/hypo.png",
+  },
+  {
+    id: 2,
+    name: "Marcelo Liberato",
+    client: "Marcelo Liberato",
+    category: "FitTech",
+    impact_headline: "Gestão completa de alunos e treinos em um só lugar.",
+    description: "Transformamos a consultoria de um personal trainer em uma plataforma digital de alta performance.",
+    what_we_did: [
+      "Site institucional moderno para vendas",
+      "Sistema de anamnese automatizado",
+      "Plataforma de acompanhamento de evolução dos alunos",
+    ],
+    results: "Eliminação de papéis e planilhas, centralizando toda a jornada do aluno, da primeira avaliação ao progresso diário.",
+    tags: ["Next.js", "Node.js", "PostgreSQL"],
+    cta: "Visitar site",
+    link: "https://marcelo-liberato.vercel.app/",
+    image: "/images/case-studies/marcelo.png",
+  },
 ];
-
