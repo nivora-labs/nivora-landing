@@ -14,7 +14,7 @@ export function ContactView() {
     } = useContactView();
 
     return (
-        <div className="mx-auto max-w-7xl rounded-[3rem] overflow-hidden bg-[#fafafa] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] my-20 border border-gray-200">
+        <div id="contact" className="mx-auto max-w-7xl rounded-[3rem] overflow-hidden bg-[#fafafa] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] my-20 border border-gray-200">
             <LetsWork
                 step={step}
                 onBookCall={handleBookCall}
