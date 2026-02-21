@@ -1,13 +1,13 @@
 import { Resend } from 'resend';
 import { ContactFormSchema } from '@/models';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export interface SendQuoteEmailParams {
   formData: ContactFormSchema;
 }
 
 export async function sendQuoteEmail({ formData }: SendQuoteEmailParams) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     const { name, email, phone, needs, interests, budget } = formData;
 
